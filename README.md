@@ -1,5 +1,5 @@
 
-                                          Program Type, Name, and Version
+                                     Program Type, Name, and Version
 
 Type -- Physics Simulation
 
@@ -7,11 +7,11 @@ Version -- Initial Pre-alpha (0.0.0)
 
 --------------------------------------------------------------------------------------------------------------------------------------------------------
 
-                                            Design Philosophy and Plans
+                                       Design Philosophy and Plans
 
 
 
-  This is planned to be a tool to use geometric algebra, wgpu,
+&nbsp;&nbsp;&nbsp;This is planned to be a tool to use geometric algebra, wgpu,
 
 egui, and various other tools to create a simple, open-source
 
@@ -23,7 +23,7 @@ condensed matter physics, and string theory.
 
 
 
-  I will make a website to host this as well as docus-tation.
+&nbsp;&nbsp;&nbsp;I will make a website to host this as well as docus-tation.
 
 This way, people can see my hard work and can easily interact
 
@@ -34,7 +34,7 @@ docus-tation.
 --------------------------------------------------------------------------------------------------------------------------------------------------------
 
 
-                                                    How to Build
+                                              How to Build
 
 ```bash
 
