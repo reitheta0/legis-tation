@@ -1,0 +1,21 @@
+# Establish aliases for swift cargo commands.
+[alias]
+t = "nextest run"
+tc = "nextest run --nocapture"
+c = "check --all-targets --all-features"
+b = "build --release"
+ex = "expand"
+aud = "audit"
+
+# Makes faster incremental builds in dev.
+[profile.dev]
+opt-level = 0
+debug = true
+
+# Use system git for fetching, helps with SSH keys.
+[net]
+git-fetch-with-cli = true
+
+# Sparse crates-io registring for easy and light caching of dependencies.
+[registries.crates-io]
+protocol = "sparse"

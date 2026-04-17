@@ -1,0 +1,36 @@
+# Uses incremental compilation to speed up compilation as well as adds debug to make inferno work.
+[profile.release]
+debug = true
+
+[profile.dev]
+incremental = true
+debug = true
+
+# Gives key information about the library.
+[package]
+name = "legis-tation"
+version = "0.0.0"
+edition = "2024"
+
+# Creates the necessary members that are used to provide the necessary tools for creating the useful tools.
+[workspace]
+members = ["crates/proc", "crates/logging", "crates/derive", "crates/progress", "crates/preconfig"]
+
+# Establishes the necessary dependencies for the physics simulation, visuals, and macros.
+[workspace.dependencies]
+getset-macro = "1.0.1"
+syn = { version = "2.0", features = ["full"] }
+quote = "1.0"
+proc-macro2 = "1.0"
+thiserror = "2.0.18"
+smart-default = "0.7.1"
+log = "0.4.29"
+tracing = "0.1.44"
+tracing-appender = "0.2.5"
+tracing-attributes = "0.1.31"
+tracing-error = "0.2.1"
+tracing-flame = "0.2.0"
+tracing-futures = "0.2.5"
+tracing-log = "0.2.0"
+tracing-subscriber = { version = "0.3.23", features = ["env-filter", "fmt", "json"] }
+inferno = "0.12.6"

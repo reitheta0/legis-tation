@@ -1,0 +1,18 @@
+
+# Warns against too many lines in a function.
+too-many-lines-threshold = 30
+
+# Warns against too many arguments in a function.
+too-many-arguments-threshold = 4
+
+# Warns against too much complexity in a function.
+cognitive-complexity-threshold = 10
+
+# Warns against pointless copying.
+trivial-copy-size-limit = 8
+
+# Ensures the Rust is the right version.
+msrv = "1.75.0"
+
+# Set MAX nesting depth to 3 (default is 0/disabled)
+excessive-nesting-threshold = 3
