@@ -4,7 +4,7 @@
 </div>
 </br>
 
-Type -- Physics Simulation
+Type -- Core Library
 
 Version -- Initial Pre-alpha (0.0.0)
 
@@ -23,7 +23,7 @@ Version -- Initial Pre-alpha (0.0.0)
 
 <dl><dd>
 
-This is planned to be a tool to use geometric algebra, wgpu,
+This is a common library for the -tation family of crates.
 
 </dd></dl>
 
@@ -31,13 +31,14 @@ This is planned to be a tool to use geometric algebra, wgpu,
 
 </dd></dl>
 
-egui, and various other tools to create a simple, open-source
+Features:
 
-physics simulation. It will initially just use simple classical mechanics,
-
-but soon will involve features such as rotational motion, quantum mechanics,
-
-condensed matter physics, and string theory.
+- derive and proc macros
+- automatic progress checker generator
+- cargo preconfiguration generator
+- easy logging
+- convenient macro generator
+- ...
 
 </p>
 
@@ -50,7 +51,7 @@ condensed matter physics, and string theory.
 
 <dl><dd>
 
-I will make a website to host this as well as docus-tation.
+Planned features
 
 </dd></dl>
 
@@ -58,11 +59,8 @@ I will make a website to host this as well as docus-tation.
 
 </dd></dl>
 
-This way, people can see my hard work and can easily interact
+Better compiler that uses all of these features before.
 
-with it. I also might have plans to integrate it natively with
-
-docus-tation.
 </p>
 
 --------------------------------------------------------------------------------------------------------------------------------------------------------
