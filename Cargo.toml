@@ -38,8 +38,8 @@ inferno = "0.12.6"
 serde = { version = "1.0.228", features = ["derive", "rc"] }
 
 [dependencies]
-logging = {path = "crates/logging"}
-derives = {path = "crates/derives"}
-proc = {path = "crates/proc"}
-progress = {path = "crates/progress"}
-preconfig = {path = "crates/preconfig"}
+logging = { path = "crates/logging" }
+derives = { path = "crates/derives" }
+proc = { path = "crates/proc" }
+progress = { path = "crates/progress" }
+preconfig = { path = "crates/preconfig" }

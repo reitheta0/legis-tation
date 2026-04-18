@@ -1,4 +1,4 @@
-use crate::logger::status::LoggingStatus;
+use crate::LoggingStatus;
 
 ///
 /// These are structs that gives a message to report to the files.
