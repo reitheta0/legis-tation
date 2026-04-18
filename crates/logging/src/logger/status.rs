@@ -35,7 +35,9 @@
 ///   If it were weather, it would be a hurricane.
 ///
 ///
+#[derives::transform]
 pub enum LoggingStatus {
+  #[default]
   Trace,
   Debug,
   Info,

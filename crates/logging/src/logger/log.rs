@@ -2,7 +2,16 @@ use tracing::instrument;
 use tracing_appender::rolling;
 use tracing_subscriber::{EnvFilter, fmt};
 
+use crate::logger::{message::StatusMessage, status::LoggingStatus};
+
+///
+///
 /// Sets up logging for jsons to see errors and get accurate debbuging.
+///
+///
+/// These give the actual functions that make it tick.
+///
+///
 #[instrument]
 pub fn setup_log_file(log_json: bool) {
   let log_file = rolling::daily("./././log", "info");
@@ -20,5 +29,27 @@ pub fn setup_log_file(log_json: bool) {
     layer.json().init()
   } else {
     layer.compact().init();
+  }
+}
+
+impl StatusMessage {
+  pub fn add_to_file(&self) {
+    match self.get_logging_status() {
+      LoggingStatus::Trace => {
+        tracing::trace!("{}", self.get_message())
+      }
+      LoggingStatus::Debug => {
+        tracing::debug!("{}", self.get_message())
+      }
+      LoggingStatus::Info => {
+        tracing::info!("{}", self.get_message())
+      }
+      LoggingStatus::Warn => {
+        tracing::warn!("{}", self.get_message())
+      }
+      LoggingStatus::Error => {
+        tracing::error!("{}", self.get_message())
+      }
+    }
   }
 }

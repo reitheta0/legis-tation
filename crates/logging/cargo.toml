@@ -9,3 +9,10 @@ tracing-subscriber = { workspace = true }
 tracing = { workspace = true }
 tracing-flame = { workspace = true }
 tracing-appender = { workspace = true }
+derives = { workspace = true }
+quote = { workspace = true }
+syn = { workspace = true }
+proc-macro2 = { workspace = true }
+smart-default = { workspace = true }
+serde = { workspace = true }
+getset-macro = { workspace = true }

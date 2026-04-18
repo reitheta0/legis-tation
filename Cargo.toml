@@ -14,10 +14,11 @@ edition = "2024"
 
 # Creates the necessary members that are used to provide the necessary tools for creating the useful tools.
 [workspace]
-members = ["crates/proc", "crates/logging", "crates/derive", "crates/progress", "crates/preconfig"]
+members = ["crates/proc", "crates/logging", "crates/derives", "crates/progress", "crates/preconfig"]
 
 # Establishes the necessary dependencies for the physics simulation, visuals, and macros.
 [workspace.dependencies]
+derives = { path = "crates/derives" }
 getset-macro = "1.0.1"
 syn = { version = "2.0", features = ["full"] }
 quote = "1.0"
@@ -34,3 +35,4 @@ tracing-futures = "0.2.5"
 tracing-log = "0.2.0"
 tracing-subscriber = { version = "0.3.23", features = ["env-filter", "fmt", "json"] }
 inferno = "0.12.6"
+serde = { version = "1.0.228", features = ["derive", "rc"] }

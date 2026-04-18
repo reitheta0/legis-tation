@@ -2,7 +2,14 @@ use tracing_flame::FlameLayer;
 use tracing_subscriber::prelude::__tracing_subscriber_SubscriberExt;
 use tracing_subscriber::{Registry, fmt};
 
-/// Sets up logging for inferno for testing performance.
+///
+///
+/// This sets up logging for inferno for testing performance.
+///
+///
+/// Add tracing::info_span!("work").in_scope(|| { ...   }); to run in main.
+///
+///
 pub fn setup_inferno_file() -> impl Drop {
   let fmt_layer = fmt::Layer::default();
 

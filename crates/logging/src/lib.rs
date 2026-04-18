@@ -1,2 +1,2 @@
-//! Provides logging capabilities for whole system
+//! Provides logging capabilities for whole system.
 pub mod logger;

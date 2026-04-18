@@ -42,8 +42,31 @@ dependencies = [
 ]
 
 [[package]]
+name = "derives"
+version = "0.0.0"
+dependencies = [
+ "getset-macro",
+ "proc-macro2",
+ "quote",
+ "serde",
+ "smart-default",
+ "syn",
+]
+
+[[package]]
 name = "engine"
 version = "0.0.0"
+
+[[package]]
+name = "getset-macro"
+version = "1.0.1"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "05099758557aee6bc45dda9ef80fa329b6de6fe0f1f6e4a2437bb94e183066c7"
+dependencies = [
+ "proc-macro2",
+ "quote",
+ "syn",
+]
 
 [[package]]
 name = "itoa"
@@ -71,6 +94,13 @@ checksum = "5e5032e24019045c762d3c0f28f5b6b8bbf38563a65908389bf7978758920897"
 name = "logging"
 version = "0.0.0"
 dependencies = [
+ "derives",
+ "getset-macro",
+ "proc-macro2",
+ "quote",
+ "serde",
+ "smart-default",
+ "syn",
  "tracing",
  "tracing-appender",
  "tracing-flame",
@@ -176,6 +206,7 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "9a8e94ea7f378bd32cbbd37198a4a91436180c5bb472411e48b5ec2e2124ae9e"
 dependencies = [
  "serde_core",
+ "serde_derive",
 ]
 
 [[package]]
@@ -225,6 +256,17 @@ name = "smallvec"
 version = "1.15.1"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "67b1b7a3b5fe4f1376887184045fcf45c69e92af734b7aaddc05fb777b6fbd03"
+
+[[package]]
+name = "smart-default"
+version = "0.7.1"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "0eb01866308440fc64d6c44d9e86c5cc17adfe33c4d6eed55da9145044d0ffc1"
+dependencies = [
+ "proc-macro2",
+ "quote",
+ "syn",
+]
 
 [[package]]
 name = "symlink"
@@ -412,15 +454,6 @@ name = "valuable"
 version = "0.1.1"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "ba73ea9cf16a25df0c8caa16c51acb937d5712a8429db78a3ee29d5dcacd3a65"
-
-[[package]]
-name = "visuals"
-version = "0.0.0"
-dependencies = [
- "proc-macro2",
- "quote",
- "syn",
-]
 
 [[package]]
 name = "windows-link"
