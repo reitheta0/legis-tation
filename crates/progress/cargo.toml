@@ -1,4 +1,4 @@
 [package]
-name = "macros"
+name = "progress"
 version = "0.0.0"
 edition = "2024"
