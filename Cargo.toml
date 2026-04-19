@@ -14,32 +14,42 @@ edition = "2024"
 
 # Creates the necessary members that are used to provide the necessary tools for creating the useful tools.
 [workspace]
-members = ["crates/proc", "crates/logging", "crates/derives", "crates/progress", "crates/preconfig"]
+members = [ "crates/proc", "crates/logging", "crates/derives", "crates/progress", "crates/preconfig", "crates/parser", "crates/node" ]
 
 # Establishes the necessary dependencies for the physics simulation, visuals, and macros.
 [workspace.dependencies]
+logging = { path = "crates/logging" }
 derives = { path = "crates/derives" }
-getset-macro = "1.0.1"
+proc = { path = "crates/proc" }
+progress = { path = "crates/progress" }
+parser = { path = "crates/parser" }
+preconfig = { path = "crates/preconfig" }
+node = { path = "crates/node" }
+tracing-subscriber = { version = "0.3.23", features = ["env-filter", "fmt", "json"] }
 syn = { version = "2.0", features = ["full"] }
+serde = { version = "1.0.228", features = ["derive", "rc"] }
+getset-macro = "1.0.1"
 quote = "1.0"
 proc-macro2 = "1.0"
 thiserror = "2.0.18"
 smart-default = "0.7.1"
 log = "0.4.29"
 tracing = "0.1.44"
+kdl = "6.5.0"
 tracing-appender = "0.2.5"
 tracing-attributes = "0.1.31"
 tracing-error = "0.2.1"
+derive_more = "2.1.1"
 tracing-flame = "0.2.0"
 tracing-futures = "0.2.5"
 tracing-log = "0.2.0"
-tracing-subscriber = { version = "0.3.23", features = ["env-filter", "fmt", "json"] }
 inferno = "0.12.6"
-serde = { version = "1.0.228", features = ["derive", "rc"] }
 
 [dependencies]
 logging = { path = "crates/logging" }
 derives = { path = "crates/derives" }
 proc = { path = "crates/proc" }
 progress = { path = "crates/progress" }
+parser = { path = "crates/parser" }
 preconfig = { path = "crates/preconfig" }
+node = { path = "crates/node" }

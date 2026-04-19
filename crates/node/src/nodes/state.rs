@@ -1,12 +1,9 @@
 use derives::transform_s;
 
-use crate::entry::NodeEntryState;
+use crate::nodes::entry::NodeEntryState;
 
-///
-///
-/// This defines the Node struct, which is the backbone that holds the tree together.
-///
-///
+//use crate::data::markup::entry::NodeEntryState;
+
 #[transform_s]
 pub struct NodeState {
   text: Option<String>,

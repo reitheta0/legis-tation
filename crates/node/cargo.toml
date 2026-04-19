@@ -1,0 +1,11 @@
+
+[package]
+name = "node"
+version = "0.0.0"
+edition = "2024"
+
+[dependencies]
+derives = { workspace = true }
+kdl = { workspace = true }
+getset-macro = { workspace = true }
+smart-default = { workspace = true }
