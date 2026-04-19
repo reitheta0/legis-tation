@@ -39,11 +39,12 @@ kdl = "6.5.0"
 tracing-appender = "0.2.5"
 tracing-attributes = "0.1.31"
 tracing-error = "0.2.1"
-derive_more = "2.1.1"
+derive_more = { version = "2.1.1", features = ["into_iterator", "try_from", "display"] }
 tracing-flame = "0.2.0"
 tracing-futures = "0.2.5"
 tracing-log = "0.2.0"
 inferno = "0.12.6"
+derive-new = "0.7.0"
 
 [dependencies]
 logging = { path = "crates/logging" }

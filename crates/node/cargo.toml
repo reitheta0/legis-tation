@@ -9,3 +9,4 @@ derives = { workspace = true }
 kdl = { workspace = true }
 getset-macro = { workspace = true }
 smart-default = { workspace = true }
+#progress = { workspace = true }

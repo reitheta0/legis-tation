@@ -1,9 +1,8 @@
-use kdl::{KdlDocument, KdlValue};
-use node::nodes::read::read_kdl;
+use std::path::Path;
 
-use crate::parse::{entry::NodeEntryState, node::NodeState};
+use kdl::{KdlDocument, KdlError};
 
-//TODO: use crate::data::markup::{entry::NodeEntryState, essay::read_kdl, node::NodeState};
+use crate::nodes::{entry::NodeEntryState, node::NodeState, read::read_kdl};
 
 pub fn parse_kdl_document(kdl_value: KdlDocument) -> Vec<NodeState> {
   let mut vector: Vec<NodeState> = Vec::new();
@@ -36,6 +35,9 @@ pub fn parse_kdl_document(kdl_value: KdlDocument) -> Vec<NodeState> {
   vector
 }
 
-pub fn grab_parsed_kdl_document(filename: &str) -> Vec<NodeState> {
-  parse_kdl_document(read_kdl(filename))
+pub fn grab_parsed_kdl_document(filename: &Path) -> Result<Vec<NodeState>, KdlError> {
+  match read_kdl(filename) {
+    Ok(doc) => Ok(parse_kdl_document(doc)),
+    Err(error) => Err(error),
+  }
 }

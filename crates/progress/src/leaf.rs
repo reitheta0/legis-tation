@@ -1,7 +1,5 @@
 use derives::transform_s;
 
-use crate::node::NodeState;
-
 #[transform_s]
 pub struct LeafState {
   text: String,

@@ -5,6 +5,10 @@ edition = "2024"
 
 [dependencies]
 derives = { workspace = true }
+thiserror = { workspace = true }
+logging = { workspace = true }
+node = { workspace = true }
+derive-new = { workspace = true }
 quote = { workspace = true }
 syn = { workspace = true }
 proc-macro2 = { workspace = true }
@@ -12,3 +16,4 @@ smart-default = { workspace = true }
 serde = { workspace = true }
 getset-macro = { workspace = true }
 derive_more = { workspace = true }
+kdl = { workspace = true }

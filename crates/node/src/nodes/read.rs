@@ -1,8 +1,18 @@
-use std::fs;
+use std::{fs, path::Path};
 
-use kdl::KdlDocument;
+use kdl::{KdlDocument, KdlError};
 
-pub fn read_kdl(filename: &str) -> KdlDocument {
-  let text = fs::read_to_string(filename).unwrap();
-  text.parse().unwrap()
+pub fn read_kdl(filename: &Path) -> Result<KdlDocument, KdlError> {
+  match fs::read_to_string(filename) {
+    Ok(strng) => match strng.parse() {
+      Ok(doc) => Ok(doc),
+      Err(error) => Err(ProgressError::ParseError),
+    },
+
+    Err(error) => Err(ProgressError::ReadError),
+  }
+  /*.parse() {
+    Ok(doc) => Ok(doc),
+    Err(error) => Err(error),
+  }*/
 }

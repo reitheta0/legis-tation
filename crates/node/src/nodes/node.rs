@@ -1,6 +1,6 @@
 use derives::transform_s;
 
-use crate::entry::NodeEntryState;
+use crate::nodes::entry::NodeEntryState;
 
 ///
 ///

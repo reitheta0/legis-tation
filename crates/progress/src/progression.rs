@@ -1,6 +1,7 @@
-use crate::{leaf::LineLeafState, node::NodeState, templates::depth_to_text};
-
 use derives::transform_s;
+use node::nodes::node::NodeState;
+
+use crate::leaf::LineLeafState;
 
 #[transform_s]
 pub struct ProgressNodeState {
@@ -9,9 +10,8 @@ pub struct ProgressNodeState {
 }
 
 impl ProgressNodeState {
-  pub fn to_string(&self) -> String {
+  pub fn to_string(&self, depth: u32) -> String {
     let state = self.get_line_state();
-    let depth = self.get_depth();
     let suffix: String;
     match state {
       LineLeafState::Leaf(state) => {
@@ -35,10 +35,10 @@ impl ProgressNodeState {
       return format!("  {}", suffix);
     }
   }
-  pub fn to_text(&self) -> [String; 2] {
+  pub fn to_text(&self, depth: u32) -> [String; 2] {
     [
-      self.to_string(),
-      ProgressNodeState::new(*self.get_node(), LineLeafState::Monostate).to_string(),
+      self.to_string(depth),
+      ProgressNodeState::new(self.get_node().clone(), LineLeafState::Monostate).to_string(depth),
     ]
   }
 }
