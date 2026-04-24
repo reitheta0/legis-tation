@@ -1,6 +1,6 @@
 ///
 ///
-/// Checks logs and reads their values.
+/// Checks logs files for their results and reads their values.
 ///
 ///
 pub fn check_logs() {

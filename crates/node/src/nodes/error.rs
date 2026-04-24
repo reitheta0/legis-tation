@@ -7,9 +7,9 @@ use thiserror::Error;
 #[derive(Error, Display)]
 #[transform_d]
 pub enum ProgressError {
-  #[default]
   ReadError,
   WriteError,
   KdlError,
   ParseError,
+  ChildError,
 }

@@ -1,6 +1,6 @@
 pub mod entry;
-pub mod error;
 pub mod leaf;
+pub mod path;
 pub mod progression;
 pub mod read;
 pub mod tree;

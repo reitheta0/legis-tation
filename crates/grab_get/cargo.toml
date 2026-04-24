@@ -1,0 +1,13 @@
+[package]
+name = "grab_get"
+version = "0.0.0"
+edition = "2024"
+
+[dependencies]
+proc-macro2 = { workspace = true }
+syn = { workspace = true }
+quote = { workspace = true }
+logging = { workspace = true }
+
+[lib]
+proc-macro = true

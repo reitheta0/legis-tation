@@ -2,7 +2,7 @@ use std::fs::File;
 
 use std::path::Path;
 
-use crate::error::ProgressError;
+use node::nodes::error::ProgressError;
 
 use crate::read::read_to_tree;
 

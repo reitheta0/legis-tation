@@ -1,7 +1,6 @@
 use crate::parse::entry::NodeEntryState;
-use derives::transform_s;
 
-//TODO: add use crate::data::markup::entry::NodeEntryState;
+use derives::transform_s;
 
 #[transform_s]
 pub struct NodeState {

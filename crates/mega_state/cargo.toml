@@ -1,0 +1,16 @@
+
+[package]
+name = "mega_state"
+version = "0.0.0"
+edition = "2024"
+
+[dependencies]
+proc-macro2 = { workspace = true }
+syn = { workspace = true }
+quote = { workspace = true }
+logging = { workspace = true }
+kdl = { workspace = true }
+smart-default = { workspace = true }
+
+[lib]
+proc-macro = true

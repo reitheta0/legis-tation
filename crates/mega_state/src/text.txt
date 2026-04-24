@@ -1,0 +1,87 @@
+use proc_macro::TokenStream;
+use quote::quote;
+use syn::{
+    parse_macro_input, Ident, Type, Token, Lit, LitStr,
+    Result, Error, braced, punctuated::Punctuated,
+};
+use syn::parse::{Parse, ParseStream};
+//use proc_macro2::TokenStream;
+//use quote::quote;
+//use syn::{parse_macro_input, DeriveInput, Parse};
+//struct
+/* src/lib.rs
+
+
+struct Field {
+    name: Ident,
+    ty: Type,
+}
+
+impl Parse for Field {
+    fn parse(input: ParseStream) -> Result<Self> {
+        let name = input.parse()?;
+        input.parse::<Token![:]>()?;
+        let ty = input.parse()?;
+        Ok(Field { name, ty })
+    }
+}
+
+
+#[proc_macro]
+pub fn define_struct(input: TokenStream) -> TokenStream {
+    let StructDef { name, fields } = parse_macro_input!(input as StructDef);
+
+    let field_defs = fields.iter().map(|f| {
+        let name = &f.name;
+        let ty = &f.ty;
+        quote! { #name: #ty }
+    });
+
+    let getters = fields.iter().map(|f| {
+        let name = &f.name;
+        let ty = &f.ty;
+        quote! {
+            pub fn #name(&self) -> &#ty {
+                &#self.#name
+            }
+        }
+    });
+
+    let setters = fields.iter().map(|f| {
+        let name = &f.name;
+        let ty = &f.ty;
+        let setter_name = syn::Ident::new(&format!("set_{}", name), name.span());
+        quote! {
+            pub fn #setter_name(&mut self, value: #ty) {
+                self.#name = value;
+            }
+        }
+    });
+
+    let field_names = fields.iter().map(|f| &f.name);
+
+    let debug_impl = quote! {
+        impl std::fmt::Debug for #name {
+            fn fmt(&self, f: &mut std::fmt::Formatter<'_>) -> std::fmt::Result {
+                f.debug_struct(stringify!(#name))
+                    #(.field(stringify!(#field_names), &#field_names))*
+                    .finish()
+            }
+        }
+    };
+
+    let expanded = quote! {
+        pub struct #name {
+            #(#field_defs),*
+        }
+
+        impl #name {
+            #(#getters)*
+            #(#setters)*
+        }
+
+        #debug_impl
+    };
+
+    TokenStream::from(expanded)
+}*/

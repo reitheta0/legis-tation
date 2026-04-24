@@ -10,5 +10,3 @@ smart-default = { workspace = true }
 serde = { workspace = true }
 getset-macro = { workspace = true }
 node = { workspace = true }
-#progress = { workspace = true }
-#TODO: use crate::data::markup::{entry::NodeEntryState, essay::read_kdl, node::NodeState};

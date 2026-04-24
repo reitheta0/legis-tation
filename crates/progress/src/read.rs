@@ -1,3 +1,5 @@
+use node::nodes::error::ProgressError;
+
 use node::nodes::node::NodeState;
 
 use kdl::KdlError;
@@ -6,7 +8,6 @@ use std::path::Path;
 
 use node::nodes::process::grab_parsed_kdl_document;
 
-use crate::error::ProgressError;
 use crate::leaf::LineLeafState;
 
 use crate::progression::ProgressNodeState;
@@ -45,7 +46,7 @@ fn grab_state_from_vector(
 }
 
 pub fn read_to_tree(input_filename: &Path) -> Result<ProgressTreeState, ProgressError> {
-  let vector: Result<Vec<NodeState>, KdlError> = grab_parsed_kdl_document(input_filename);
+  let vector: Result<Vec<NodeState>, ProgressError> = grab_parsed_kdl_document(input_filename);
   let mut progress_tree = ProgressTreeState::new(Vec::new());
   match vector {
     Ok(vect) => {

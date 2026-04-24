@@ -1,5 +1,6 @@
 use std::fs::File;
 
+use node::nodes::error::ProgressError;
 use thiserror::Error;
 
 use std::io::Write;
@@ -10,7 +11,7 @@ use derive_more::IntoIterator;
 
 use derive_new::new;
 
-use crate::{error::ProgressError, progression::ProgressNodeState};
+use crate::progression::ProgressNodeState;
 
 #[derive(IntoIterator)]
 #[transform_s]
